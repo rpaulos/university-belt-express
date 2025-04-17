@@ -14,25 +14,25 @@ CREATE TABLE admins (
 
 -- creates the table for storing location of universities (no dependecies)
 CREATE TABLE university_location (
-	university_location_ID VARCHAR(10) PRIMARY KEY,
+	university_location_ID VARCHAR(15) PRIMARY KEY,
     city VARCHAR(20) NOT NULL,
-    street VARCHAR(20) NOT NULL,
+    street VARCHAR(50) NOT NULL,
     zip_code VARCHAR(4) NOT NULL
 );
 
 -- creates university table (depends on university_location)
 CREATE TABLE university (
-	university_ID VARCHAR(10) PRIMARY KEY,
-    university_location_ID VARCHAR(10) NOT NULL,
+	university_ID VARCHAR(15) PRIMARY KEY,
+    university_location_ID VARCHAR(15) NOT NULL,
     university_name VARCHAR(50) UNIQUE NOT NULL,
     
     FOREIGN KEY (university_location_ID) REFERENCES university_location(university_location_ID)
 );
 -- creates customer table
 CREATE TABLE customer (
-	customer_ID VARCHAR(10) PRIMARY KEY,
-    university_ID VARCHAR(10) NOT NULL,
-    pandapay_ID VARCHAR(10) UNIQUE NOT NULL,
+	customer_ID VARCHAR(15) PRIMARY KEY,
+    university_ID VARCHAR(15) NOT NULL,
+    pandapay_ID VARCHAR(15) UNIQUE NOT NULL,
     customer_phone_number VARCHAR(11) UNIQUE NOT NULL,
     customer_email VARCHAR(30) UNIQUE NOT NULL,
     customer_first_name VARCHAR(30) NOT NULL,
@@ -44,8 +44,8 @@ CREATE TABLE customer (
 
 -- creates wallet with foreign key to who owns it
 CREATE TABLE pandapay_wallet (
-	pandapay_ID VARCHAR(10) PRIMARY KEY,
-	customer_ID VARCHAR(10) UNIQUE NOT NULL,
+	pandapay_ID VARCHAR(15) PRIMARY KEY,
+	customer_ID VARCHAR(15) UNIQUE NOT NULL,
     customer_balance FLOAT(10, 2) NOT NULL,
     
     FOREIGN KEY (customer_ID) REFERENCES customer(customer_ID)
@@ -93,15 +93,23 @@ DELIMITER ;
         
 INSERT INTO customer (customer_ID, university_ID, pandapay_ID, customer_phone_number, customer_email, customer_first_name, customer_last_name)
 	VALUES 
-		('2023-000001', 'UST-0001', 'PAND-UST0001', '09171234567', 'aynbernos@email.com', 'Ayn', 'Bernos'),
-		('2023-000002', 'UST-0001', 'PAND-UST0002', '09171234568', 'ejobiena@email.com', 'EJ', 'Obiena'),
-		('2023-000003', 'NU-0002', 'PAND-NU0003', '09171234569', 'raepaulos@email.com', 'Rae', 'Paulos'),
-		('2023-000004', 'NU-0002', 'PAND-NU0004', '09171234570', 'tristansevilla@email.com', 'Tristan', 'Sevilla'),
-		('2023-000005', 'NU-0002', 'PAND-NU0005', '09171234571', 'jaredpilapil@email.com', 'Jared', 'Pilapil');
+		('2023-00001', 'UST-0001', 'PAND-UST0001', '09171234567', 'aynbernos@email.com', 'Ayn', 'Bernos'),
+		('2023-00002', 'UST-0001', 'PAND-UST0002', '09171234568', 'ejobiena@email.com', 'EJ', 'Obiena'),
+		('2023-00003', 'NU-0002', 'PAND-NU0003', '09171234569', 'raepaulos@email.com', 'Rae', 'Paulos'),
+		('2023-00004', 'NU-0002', 'PAND-NU0004', '09171234570', 'tristansevilla@email.com', 'Tristan', 'Sevilla'),
+		('2023-00005', 'NU-0002', 'PAND-NU0005', '09171234571', 'jaredpilapil@email.com', 'Jared', 'Pilapil');
         
-INSERT INTO pandapay_wallet (pandapay_ID, customer_ID, balance)
+INSERT INTO pandapay_wallet (pandapay_ID, customer_ID, customer_balance)
 	VALUES
-    ('1111', '111', 0);
+		('PAND-UST0001', '2023-00001', 0.00),
+		('PAND-UST0002', '2023-00002', 0.00),
+		('PAND-NU0003', '2023-00003', 0.00),
+		('PAND-NU0004', '2023-00004', 0.00),
+		('PAND-NU0005', '2023-00005', 0.00);
+
+    
+    
+
 
     
     
