@@ -55,3 +55,32 @@ CREATE TABLE pandapay_wallet (
 ALTER TABLE customer
 ADD CONSTRAINT fk_pandapay_ID
 FOREIGN KEY (pandapay_ID) REFERENCES pandapay_wallet(pandapay_ID);
+
+-- INSERTING VALUES
+-- School abrev, City, Location number
+INSERT INTO university_location(university_location_ID, city, street, zip_code)
+	VALUES
+		('UST_MNL', 'Manila', 'España Blvd.', '1008'),
+        ('NU_MNL', 'Manila', 'Jhocson St.', '1008'),
+        ('FEU_MNL', 'Manila', 'Nicanor Reyes St.', '1008'),
+		('CEU_MNL', 'Manila', 'Mendiola St.', '1005'),
+		('SBU_MNL', 'Manila', 'Mendiola St.', '1005'),
+		('MAP_MNL', 'Manila', 'Muralla St., Intramuros', '1002');
+
+-- School abrev, number of school added
+INSERT INTO university (university_ID, university_location_ID, university_name)
+	VALUES
+		('UST-0001', 'UST_MNL', 'University of Santo Tomas'),
+        ('NU-0002', 'NU_MNL', 'National University'),
+        ('FEU-0003', 'FEU_MNL', 'Far Eastern University'),
+        ('CEU-0004', 'CEU_MNL', 'Centro Escolar University'),
+        ('SBU-0005', 'SBU_MNL', 'San Beda University'),
+        ('MAP-0006', 'MAP_MNL', 'Mapúa University');
+
+    
+SELECT * FROM university_location;
+SELECT * FROM university;
+
+    
+    
+    
