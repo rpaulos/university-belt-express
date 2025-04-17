@@ -77,10 +77,31 @@ INSERT INTO university (university_ID, university_location_ID, university_name)
         ('SBU-0005', 'SBU_MNL', 'San Beda University'),
         ('MAP-0006', 'MAP_MNL', 'Mapúa University');
 
-    
-SELECT * FROM university_location;
-SELECT * FROM university;
+-- Auto creates a wallet everytime a new user is added
+DELIMITER $$
 
-    
+CREATE TRIGGER create_wallet_after_customer_insert
+AFTER INSERT ON customer
+FOR EACH ROW
+BEGIN
+    INSERT INTO pandapay_wallet (pandapay_ID, customer_ID, customer_balance)
+    VALUES (NEW.pandapay_ID, NEW.customer_ID, 0.00);
+END$$
+
+DELIMITER ;
+
+        
+INSERT INTO customer (customer_ID, university_ID, pandapay_ID, customer_phone_number, customer_email, customer_first_name, customer_last_name)
+	VALUES 
+		('2023-000001', 'UST-0001', 'PAND-UST0001', '09171234567', 'aynbernos@email.com', 'Ayn', 'Bernos'),
+		('2023-000002', 'UST-0001', 'PAND-UST0002', '09171234568', 'ejobiena@email.com', 'EJ', 'Obiena'),
+		('2023-000003', 'NU-0002', 'PAND-NU0003', '09171234569', 'raepaulos@email.com', 'Rae', 'Paulos'),
+		('2023-000004', 'NU-0002', 'PAND-NU0004', '09171234570', 'tristansevilla@email.com', 'Tristan', 'Sevilla'),
+		('2023-000005', 'NU-0002', 'PAND-NU0005', '09171234571', 'jaredpilapil@email.com', 'Jared', 'Pilapil');
+        
+INSERT INTO pandapay_wallet (pandapay_ID, customer_ID, balance)
+	VALUES
+    ('1111', '111', 0);
+
     
     
