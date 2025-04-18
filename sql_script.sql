@@ -20,6 +20,14 @@ CREATE TABLE university_location (
     zip_code VARCHAR(4) NOT NULL
 );
 
+-- creates the table for storing location of restaurants (no dependecies)
+CREATE TABLE restaurant_location (
+	restaurant_location_ID VARCHAR(15) PRIMARY KEY,
+    city VARCHAR(20) NOT NULL,
+    street VARCHAR(50) NOT NULL,
+    zip_code VARCHAR(4) NOT NULL
+);
+
 -- creates university table (depends on university_location)
 CREATE TABLE university (
 	university_ID VARCHAR(15) PRIMARY KEY,
@@ -28,6 +36,17 @@ CREATE TABLE university (
     
     FOREIGN KEY (university_location_ID) 
     REFERENCES university_location(university_location_ID)
+	ON DELETE CASCADE
+);
+
+-- creates restaurant table (depends on restaurant_location)
+CREATE TABLE restaurant (
+	restaurant_ID VARCHAR(15) PRIMARY KEY,
+    restaurant_location_ID VARCHAR(15) NOT NULL,
+    restaurant_name VARCHAR(50) NOT NULL,
+    
+    FOREIGN KEY (restaurant_location_ID) 
+    REFERENCES restaurant_location(restaurant_location_ID)
 	ON DELETE CASCADE
 );
 -- creates customer table
@@ -45,6 +64,23 @@ CREATE TABLE customer (
     ON DELETE CASCADE
 );
 
+CREATE TABLE price_range (
+	price_range_ID VARCHAR(15) PRIMARY KEY,
+    price_range_level VARCHAR(20) NOT NULL
+);
+
+-- create product table
+CREATE TABLE product (
+	product_ID VARCHAR(15) PRIMARY KEY,
+    restaurant_ID VARCHAR(15) NOT NULL,
+    price_range_ID VARCHAR(15) NOT NULL,
+    product_name VARCHAR(20) NOT NULL,
+    product_quantity INT NOT NULL,
+    
+    FOREIGN KEY (price_range_ID)
+    REFERENCES price_range(price_range_ID)
+);
+
 -- creates wallet with foreign key to who owns it
 CREATE TABLE pandapay_wallet (
 	customer_ID VARCHAR(15) UNIQUE NOT NULL,
@@ -52,6 +88,16 @@ CREATE TABLE pandapay_wallet (
     
     FOREIGN KEY (customer_ID) 
     REFERENCES customer(customer_ID)
+    ON DELETE CASCADE
+);
+
+-- creates wallet with foreign key to who owns it
+CREATE TABLE restaurant_pandapay_wallet (
+	restaurant_ID VARCHAR(15) UNIQUE NOT NULL,
+    restaurant_balance FLOAT(10, 2) NOT NULL,
+    
+    FOREIGN KEY (restaurant_ID) 
+    REFERENCES restaurant(restaurant_ID)
     ON DELETE CASCADE
 );
 
@@ -88,7 +134,25 @@ BEGIN
 END$$
 
 DELIMITER ;
-        
+
+-- Auto creates a wallet everytime a new restaurant is added
+DELIMITER $$
+
+CREATE TRIGGER create_wallet_after_restaurant_insert
+AFTER INSERT ON restaurant
+FOR EACH ROW
+BEGIN
+    INSERT INTO restaurant_pandapay_wallet (restaurant_ID, restaurant_balance)
+    VALUES (NEW.restaurant_ID, 0.00);
+END$$
+
+DELIMITER ;
+
+INSERT INTO customer (customer_ID, university_ID, customer_phone_number, customer_email, customer_first_name, customer_last_name)
+	VALUES 
+		('2023-00006', 'NU-0002', '09171222570', 'dummy@email.com', 'Christian', 'Molina'),
+		('2023-00007', 'NU-0002', '09142234571', 'fake@email.com', 'Blue', 'Pilak');
+
 INSERT INTO customer (customer_ID, university_ID, customer_phone_number, customer_email, customer_first_name, customer_last_name)
 	VALUES 
 		('2023-00001', 'UST-0001', '09171234567', 'aynbernos@email.com', 'Ayn', 'Bernos'),
@@ -96,10 +160,7 @@ INSERT INTO customer (customer_ID, university_ID, customer_phone_number, custome
 		('2023-00003', 'NU-0002', '09171234569', 'raepaulos@email.com', 'Rae', 'Paulos'),
 		('2023-00004', 'NU-0002', '09171234570', 'tristansevilla@email.com', 'Tristan', 'Sevilla'),
 		('2023-00005', 'NU-0002', '09171234571', 'jaredpilapil@email.com', 'Jared', 'Pilapil');
-        
-DROP DATABASE ubeltexpress;
 
-SELECT * FROM pandapay_wallet;
     
     
 
