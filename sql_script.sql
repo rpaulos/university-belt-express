@@ -101,27 +101,6 @@ CREATE TABLE restaurant_pandapay_wallet (
     ON DELETE CASCADE
 );
 
--- INSERTING VALUES
--- School abrev, City, Location number
-INSERT INTO university_location(university_location_ID, city, street, zip_code)
-	VALUES
-		('UST_MNL', 'Manila', 'España Blvd.', '1008'),
-        ('NU_MNL', 'Manila', 'Jhocson St.', '1008'),
-        ('FEU_MNL', 'Manila', 'Nicanor Reyes St.', '1008'),
-		('CEU_MNL', 'Manila', 'Mendiola St.', '1005'),
-		('SBU_MNL', 'Manila', 'Mendiola St.', '1005'),
-		('MAP_MNL', 'Manila', 'Muralla St., Intramuros', '1002');
-
--- School abrev, number of school added
-INSERT INTO university (university_ID, university_location_ID, university_name)
-	VALUES
-		('UST-0001', 'UST_MNL', 'University of Santo Tomas'),
-        ('NU-0002', 'NU_MNL', 'National University'),
-        ('FEU-0003', 'FEU_MNL', 'Far Eastern University'),
-        ('CEU-0004', 'CEU_MNL', 'Centro Escolar University'),
-        ('SBU-0005', 'SBU_MNL', 'San Beda University'),
-        ('MAP-0006', 'MAP_MNL', 'Mapúa University');
-
 -- Auto creates a wallet everytime a new user is added
 DELIMITER $$
 
@@ -147,12 +126,29 @@ BEGIN
 END$$
 
 DELIMITER ;
+        
+-- INSERTING VALUES
+-- School abrev, City
+INSERT INTO university_location(university_location_ID, city, street, zip_code)
+	VALUES
+		('UST_MNL', 'Manila', 'España Blvd.', '1008'),
+        ('NU_MNL', 'Manila', 'Jhocson St.', '1008'),
+        ('FEU_MNL', 'Manila', 'Nicanor Reyes St.', '1008'),
+		('CEU_MNL', 'Manila', 'Mendiola St.', '1005'),
+		('SBU_MNL', 'Manila', 'Mendiola St.', '1005'),
+		('MAP_MNL', 'Manila', 'Muralla St., Intramuros', '1002');
 
-INSERT INTO customer (customer_ID, university_ID, customer_phone_number, customer_email, customer_first_name, customer_last_name)
-	VALUES 
-		('2023-00006', 'NU-0002', '09171222570', 'dummy@email.com', 'Christian', 'Molina'),
-		('2023-00007', 'NU-0002', '09142234571', 'fake@email.com', 'Blue', 'Pilak');
+-- School abrev, number of school added
+INSERT INTO university (university_ID, university_location_ID, university_name)
+	VALUES
+		('UST-0001', 'UST_MNL', 'University of Santo Tomas'),
+        ('NU-0002', 'NU_MNL', 'National University'),
+        ('FEU-0003', 'FEU_MNL', 'Far Eastern University'),
+        ('CEU-0004', 'CEU_MNL', 'Centro Escolar University'),
+        ('SBU-0005', 'SBU_MNL', 'San Beda University'),
+        ('MAP-0006', 'MAP_MNL', 'Mapúa University');
 
+-- Customers
 INSERT INTO customer (customer_ID, university_ID, customer_phone_number, customer_email, customer_first_name, customer_last_name)
 	VALUES 
 		('2023-00001', 'UST-0001', '09171234567', 'aynbernos@email.com', 'Ayn', 'Bernos'),
@@ -160,6 +156,8 @@ INSERT INTO customer (customer_ID, university_ID, customer_phone_number, custome
 		('2023-00003', 'NU-0002', '09171234569', 'raepaulos@email.com', 'Rae', 'Paulos'),
 		('2023-00004', 'NU-0002', '09171234570', 'tristansevilla@email.com', 'Tristan', 'Sevilla'),
 		('2023-00005', 'NU-0002', '09171234571', 'jaredpilapil@email.com', 'Jared', 'Pilapil');
+        
+
 
     
     
