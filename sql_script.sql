@@ -76,6 +76,7 @@ CREATE TABLE product (
     price_range_ID VARCHAR(15) NOT NULL,
     product_name VARCHAR(20) NOT NULL,
     product_quantity INT NOT NULL,
+    product_price DECIMAL(10, 2) NOT NULL,
     
     FOREIGN KEY (price_range_ID)
     REFERENCES price_range(price_range_ID)
@@ -157,9 +158,34 @@ INSERT INTO customer (customer_ID, university_ID, customer_phone_number, custome
 		('2023-00004', 'NU-0002', '09171234570', 'tristansevilla@email.com', 'Tristan', 'Sevilla'),
 		('2023-00005', 'NU-0002', '09171234571', 'jaredpilapil@email.com', 'Jared', 'Pilapil');
         
-
-
+-- Insert into price_range
+INSERT INTO price_range (price_range_ID, price_range_level)
+	VALUES 
+	  ('PR1', 'Affordable'),
+	  ('PR2', 'Mid-range'),
+	  ('PR3', 'Expensive');
     
+-- Insert into restaurant_location
+INSERT INTO restaurant_location (restaurant_location_ID, city, street, zip_code)
+	VALUES 
+		('RL001', 'Manila', 'Legarda St., Sampaloc', '1008');
+
+-- Insert into restaurant
+INSERT INTO restaurant (restaurant_ID, restaurant_location_ID, restaurant_name)
+	VALUES 
+		('R001', 'RL001', 'Jollibee Legarda Bustillos');
+
+-- Insert into product (restaurant_pandapay_wallet is auto-handled by trigger)
+INSERT INTO product (product_ID, restaurant_ID, price_range_ID, product_name, product_quantity, product_price)
+	VALUES 
+	  ('P00001', 'R001', 'PR1', 'Burger Steak', 50, 60.00),
+	  ('P00002', 'R001', 'PR1', 'Jollispaghetti', 50, 65.00),
+	  ('P00003', 'R001', 'PR1', '1pc Chickenjoy', 50, 89.50);
+      
+SELECT * FROM product;
+
+
+
     
 
 
