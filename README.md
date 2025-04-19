@@ -2,7 +2,7 @@
 ## Student-Friendly Food Delivery App  
 
 ## Overview  
-**UBELT-ExPress** is a **food delivery application** inspired by **Foodpanda**, made specifically for students within the **U-Belt** area of Manila. It’s designed to offer a fast, convenient, and budget-conscious way to order food from nearby restaurants. The project is currently in the early stages, with the **UI design** and **Entity Relationship Diagram (ERD)** in progress. Future plans include implementing key features similar to Foodpanda, such as restaurant listings, place orders, and a built in e-wallet. 
+**UBELT-ExPress** is a **food delivery application** inspired by **Foodpanda**, made specifically for students within the **U-Belt** area of Manila. It’s designed to offer a fast, convenient, and budget-conscious way to order food from nearby restaurants. The project is in the early stages, with the **UI design** and **Entity Relationship Diagram (ERD)** in progress. Plans include implementing key features like Foodpanda, such as restaurant listings, placing orders, and a built-in e-wallet. 
 
 (This project is not intended to create and deliver actual orders.)
 
@@ -47,7 +47,7 @@ The goal of UBELT-ExPress is to:
 
 ## Contributors  
 - **[Rae Paulos](https://github.com/rpaulos)** – Lead Frontend & Backend Developer
-- **[Tristan Sevilla](https://github.com/Hyakkki)** -
+- **[Tristan Sevilla](https://github.com/Hyakkki)** - Backend Developer & Cybersecurity Assesor
 - **Jared Pilapil**
 
 ## License  
