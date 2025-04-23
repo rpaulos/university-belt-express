@@ -20,8 +20,8 @@ The goal of UBELT-ExPress is to:
 - **Manage Restaurant** - Login as business owner. Manage stock quantity.
 
 ## Technologies Used  
-- **Backend:** Java  
-- **Database:** MySQL
+- **Backend:** Java, Python
+- **Database:** MySQL, Microsoft SQL
 - **UI/UX:** Figma and Scene Buidler
 - **IDE:** VScode
 - **Tools:** Git, Github
@@ -33,7 +33,7 @@ The goal of UBELT-ExPress is to:
    git clone https://github.com/rpaulos/ubeltExpress  
    ```  
 2. Set up the project environment.  
-3. Configure the MySQL database using the provided schema.  
+3. Configure the MySQL database using the provided schema (See the sql_script).  
 4. Run the application in your Java development environment.  
 
 ## Usage  
