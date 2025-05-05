@@ -18,6 +18,8 @@ The goal of UBELT-ExPress is to:
 - **Order Management** – Place, track, and manage food orders.
 - **E-Wallet Integration** – Manage in-app payments and balance.
 - **Manage Restaurant** - Login as business owner. Manage stock quantity.
+- **Estimated Time of Delivery** - The Google Maps API offers Distance Matrix that allows for the ETA from point A to B including traffic time.
+- **Personalized Messages** - The OpenAI API will customize the short messages to notify deliveries and orders.
 
 ## Technologies Used  
 - **Backend:** Java, Python
@@ -42,13 +44,13 @@ The goal of UBELT-ExPress is to:
 3. Track your order status (future feature).  
 
 ## Future Enhancements  
-- **Google Maps API Integration**
+- **Web Scraping** - Gather data from the websites of various local restaurants nearby.
   
 
 ## Contributors  
 - **[Rae Paulos](https://github.com/rpaulos)** – Lead Frontend & Backend Developer
-- **[Tristan Sevilla](https://github.com/Hyakkki)** - Backend Developer & Cybersecurity Assesor
-- **Jared Pilapil**
+- **[Tristan Sevilla](https://github.com/Hyakkki)** - Backend Developer & Cybersecurity
+- **Jared Pilapil** - Backend Developer & Data Security
 
 ## License  
 This project is for **personal and educational purposes** and is not intended for commercial use.  
