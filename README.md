@@ -36,9 +36,11 @@ The goal of UBELT-ExPress is to:
    ```sh  
    git clone https://github.com/rpaulos/ubeltExpress  
    ```  
-2. Set up the project environment.  
-3. Configure the MySQL database using the provided schema (See the sql_script).  
-4. Run the application in your Java development environment.  
+2. Set up the project environment.
+   - Setup Anaconda
+   - Install python, googlemaps, OpenAI, Selenium, and Undetected Chrome Driver
+4. Configure the MySQL database using the provided schema (See the sql_script).  
+5. Run the application in your Java development environment.  
 
 ## Usage  
 1. Navigate through the UI to explore restaurant listings (once implemented).  
