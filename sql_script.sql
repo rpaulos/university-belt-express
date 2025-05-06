@@ -186,6 +186,8 @@ SELECT * FROM product;
 
 SELECT * FROM customers;
 
+HELLO TRISTAN
+
 
 
     
