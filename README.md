@@ -2,7 +2,9 @@
 ## Student-Friendly Food Delivery App  
 
 ## Overview  
-**UBELT-ExPress** is a **food delivery application** inspired by **Foodpanda**, made specifically for students within the **U-Belt** area of Manila. It’s designed to offer a fast, convenient, and budget-conscious way to order food from nearby restaurants. The project is currently in the early stages, with the **UI design** and **Entity Relationship Diagram (ERD)** in progress. Future plans include implementing key features similar to Foodpanda, such as restaurant listings, place orders, and a built in e-wallet. 
+- **U-Belt-ExPress** is a full-stack food delivery application developed specifically for students within the University Belt (U-Belt) area of Manila. Taking inspiration from established platforms like Foodpanda, it aims to provide a fast, reliable, and student-friendly way to order food from nearby local restaurants, eateries, and food stalls. The platform is designed with the student lifestyle in mind—prioritizing affordability, convenience, and ease of use.
+- The project is currently in the active development stage, with both frontend and backend systems being constructed in parallel. Efforts are focused on building the app's foundational structure, which includes user interface design, database schema development through an Entity Relationship Diagram (ERD), and essential functionalities such as restaurant listings, order placement, and a built-in e-wallet for cashless transactions.
+- To ensure real-time relevance and pricing accuracy, UBELT-ExPress incorporates web-scraped data from restaurant pages and menus. This allows the platform to dynamically reflect menu offerings and prices from partner establishments within the U-Belt area, improving the overall accuracy and usefulness of the app for its student users.
 
 (This project is not intended to create and deliver actual orders.)
 
@@ -18,10 +20,12 @@ The goal of UBELT-ExPress is to:
 - **Order Management** – Place, track, and manage food orders.
 - **E-Wallet Integration** – Manage in-app payments and balance.
 - **Manage Restaurant** - Login as business owner. Manage stock quantity.
+- **Estimated Time of Delivery** - The Google Maps API offers Distance Matrix that allows for the ETA from point A to B including traffic time.
+- **Personalized Messages** - The OpenAI API will customize the short messages to notify deliveries and orders.
 
 ## Technologies Used  
-- **Backend:** Java  
-- **Database:** MySQL
+- **Backend:** Java, Python
+- **Database:** MySQL, Microsoft SQL
 - **UI/UX:** Figma and Scene Buidler
 - **IDE:** VScode
 - **Tools:** Git, Github
@@ -32,9 +36,11 @@ The goal of UBELT-ExPress is to:
    ```sh  
    git clone https://github.com/rpaulos/ubeltExpress  
    ```  
-2. Set up the project environment.  
-3. Configure the MySQL database using the provided schema.  
-4. Run the application in your Java development environment.  
+2. Set up the project environment.
+   - Setup Anaconda
+   - Install python, googlemaps, OpenAI, Selenium, and Undetected Chrome Driver
+4. Configure the MySQL database using the provided schema (See the sql_script).  
+5. Run the application in your Java development environment.  
 
 ## Usage  
 1. Navigate through the UI to explore restaurant listings (once implemented).  
@@ -42,13 +48,13 @@ The goal of UBELT-ExPress is to:
 3. Track your order status (future feature).  
 
 ## Future Enhancements  
-- **Google Maps API Integration**
+- **Web Scraping** - Gather data from the websites of various local restaurants nearby.
   
 
 ## Contributors  
 - **[Rae Paulos](https://github.com/rpaulos)** – Lead Frontend & Backend Developer
-- **[Tristan Sevilla](https://github.com/Hyakkki)** -
-- **Jared Pilapil**
+- **[Tristan Sevilla](https://github.com/Hyakkki)** - Backend Developer & Cybersecurity
+- **Jared Pilapil** - Backend Developer & Data Security
 
 ## License  
 This project is for **personal and educational purposes** and is not intended for commercial use.  
