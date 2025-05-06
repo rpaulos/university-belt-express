@@ -57,3 +57,5 @@ public class DatabaseHandler {
         return affectedRows;
     }
 }
+
+// Hi Rae
