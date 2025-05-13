@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.StartUp.SignUpController">
+   <children>
+      <AnchorPane layoutX="47.0" layoutY="127.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="740.0" fitWidth="356.0" layoutX="8.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-16.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../User%20Interface/Sign%20Up.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="20.0" layoutY="208.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: Transparent;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="19.0" layoutY="267.0" prefHeight="33.0" prefWidth="302.0" promptText="Password" style="-fx-background-color: Transparent;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="15.0" layoutY="377.0" prefHeight="33.0" prefWidth="146.0" promptText="Juan" style="-fx-background-color: Transparent;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="174.0" layoutY="376.0" prefHeight="34.0" prefWidth="147.0" promptText="Dela Cruz" style="-fx-background-color: Transparent;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="16.0" layoutY="431.0" prefHeight="34.0" prefWidth="302.0" promptText="0912 345 6789" style="-fx-background-color: Transparent;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
