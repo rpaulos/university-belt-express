@@ -1,10 +1,13 @@
 import java.sql.*;
-import javax.naming.spi.DirStateFactory;
 
 public class DatabaseHandler {
     private static DatabaseHandler handler = null;
     private static Statement stmt = null;
     private static PreparedStatement pstatement = null;
+
+    public static String dburl = DatabaseCredentials.ignoreDburl;
+    public static String userName = DatabaseCredentials.ignoreUserName;
+    public static String password = DatabaseCredentials.ignorePassword;
 
     public static DatabaseHandler getInstance() {
         if (handler == null) {
@@ -16,9 +19,6 @@ public class DatabaseHandler {
     public static Connection getDBConnection()
     {
         Connection connection = null;
-        String dburl = "jdbc:mysql://localhost:3306/gcash";
-        String userName = "root";
-        String password = "123";
 
         try
         {
@@ -55,5 +55,28 @@ public class DatabaseHandler {
             System.out.println("Not working");
         }
         return affectedRows;
+    }
+
+    public static String getLastName(String phone_number) {
+        String query = "SELECT last_name FROM users WHERE phone_number = ?";
+        String last_name = null;
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet result = null;
+
+        try {
+            conn = getDBConnection();
+            stmt = conn.prepareStatement(query);
+            stmt.setString(1, phone_number);
+            result = stmt.executeQuery();
+
+            if(result.next()) {
+                last_name = result.getString("last_name");
+            } 
+            
+        } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        return last_name;
     }
 }
