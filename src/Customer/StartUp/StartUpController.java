@@ -34,15 +34,28 @@ public class StartUpController {
     private Parent root;
 
     @FXML
+    public void toLoginWithGooglePageHandler(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login.fxml"));
+
+        root = loader.load();
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    @FXML
     public void toSignUpPageHandler(ActionEvent event) throws IOException{
-        // FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
 
-        // root = loader.load();
+        root = loader.load();
 
-        // stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        // scene = new Scene(root);
-        // stage.setScene(scene);
-        // stage.show();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 }
