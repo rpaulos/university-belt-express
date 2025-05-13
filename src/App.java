@@ -1,5 +1,8 @@
+import Database.DatabaseHandler;
 import javafx.application.Application;
 import javafx.stage.Stage;
+
+import Database.DatabaseHandler;
 
 public class App extends Application {
 
