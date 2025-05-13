@@ -27,6 +27,9 @@ public class LoginController {
     @FXML
     private TextField tf_email;
 
+    @FXML
+    private Button btn_close;
+
     private Stage stage;
     private Scene scene; 
     private Parent root;
@@ -34,6 +37,19 @@ public class LoginController {
     @FXML
     public void toSignUpPageHandler(ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
+
+        root = loader.load();
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    @FXML
+    void toStartUpPageHandler(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
 
         root = loader.load();
 
