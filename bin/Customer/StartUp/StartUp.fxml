@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.StartUp.StartUpController">
+   <children>
+      <AnchorPane prefHeight="447.0" prefWidth="207.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="740.0" fitWidth="347.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Login.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="loginWithGoogleButton" layoutX="30.0" layoutY="546.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="282.0" style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <Button fx:id="signUpWithEmailButton" layoutX="29.0" layoutY="658.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="283.0" style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <Button fx:id="loginWithFacebookButton" layoutX="28.0" layoutY="594.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="283.0" style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
