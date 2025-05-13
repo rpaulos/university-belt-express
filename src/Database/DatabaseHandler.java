@@ -58,26 +58,4 @@ public class DatabaseHandler {
         return affectedRows;
     }
 
-    public static String getLastName(String phone_number) {
-        String query = "SELECT last_name FROM users WHERE phone_number = ?";
-        String last_name = null;
-        Connection conn = null;
-        PreparedStatement stmt = null;
-        ResultSet result = null;
-
-        try {
-            conn = getDBConnection();
-            stmt = conn.prepareStatement(query);
-            stmt.setString(1, phone_number);
-            result = stmt.executeQuery();
-
-            if(result.next()) {
-                last_name = result.getString("last_name");
-            } 
-            
-        } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        return last_name;
-    }
 }
