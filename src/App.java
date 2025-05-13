@@ -1,26 +1,29 @@
-import Database.DatabaseHandler;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 
 import Database.DatabaseHandler;
+import Customer;
+import Business;
+
+import java.io.IOException;
+
+import Admin;
 
 public class App extends Application {
 
     @Override
-    public void start(Stage primaryStage) {
-        // Optional: GUI code goes here
-        System.out.println("JavaFX App Started");
-        getName();
+    public void start(Stage primaryStage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/Customer/StartUp/StartUp.fxml"));
+
+        primaryStage.setTitle("University Belt Express");
+        primaryStage.setScene(new Scene(root, 340, 740));
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
         launch(args);
-    }
-
-    public static void getName() {
-        String myNumber = "093234566741";
-        String myLastName = DatabaseHandler.getLastName(myNumber);
-
-        System.out.println(myLastName);
     }
 }
