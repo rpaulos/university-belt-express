@@ -1,5 +1,6 @@
 package Customer.StartUp;
 
+import Customer.CustomerDatabaseHandler;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -57,7 +58,28 @@ public class LoginController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
+
+    @FXML
+    void toValidateLogin(ActionEvent event) throws IOException{
+
+        String email = tf_email.getText();
+        String password = pf_password.getText();
+
+        if (CustomerDatabaseHandler.validateLoginCredentials(email, password)) {
+            System.out.println("Succesful");
+        } else {
+            System.out.println("Unsuccesful");
+        }
+    }
+
+    // FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
+
+    // root = loader.load();
+
+    // stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    // scene = new Scene(root);
+    // stage.setScene(scene);
+    // stage.show();
 
 }
