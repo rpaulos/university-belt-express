@@ -184,9 +184,7 @@ INSERT INTO product (product_ID, restaurant_ID, price_range_ID, product_name, pr
       
 SELECT * FROM product;
 
-SELECT * FROM customers;
-
-HELLO TRISTAN
+SELECT * FROM restaurant;
 
 
 
