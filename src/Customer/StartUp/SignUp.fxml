@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -21,11 +22,6 @@
                   <Font size="11.0" />
                </font>
             </TextField>
-            <TextField layoutX="19.0" layoutY="267.0" prefHeight="33.0" prefWidth="302.0" promptText="Password" style="-fx-background-color: Transparent;">
-               <font>
-                  <Font size="11.0" />
-               </font>
-            </TextField>
             <TextField layoutX="15.0" layoutY="377.0" prefHeight="33.0" prefWidth="146.0" promptText="Juan" style="-fx-background-color: Transparent;">
                <font>
                   <Font size="11.0" />
@@ -42,6 +38,11 @@
                </font>
             </TextField>
             <Button fx:id="btn_close" layoutX="13.0" layoutY="15.0" mnemonicParsing="false" onAction="#toStartUpPageHandler" prefHeight="26.0" prefWidth="36.0" style="-fx-background-color: transparent;" />
+            <PasswordField layoutX="18.0" layoutY="266.0" prefHeight="35.0" prefWidth="304.0" promptText="Password" style="-fx-background-color: transparent;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </PasswordField>
          </children>
       </AnchorPane>
    </children>
