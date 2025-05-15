@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="159.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.Home.CardController">
+   <children>
+      <AnchorPane layoutX="11.2" layoutY="-14.0" prefHeight="134.0" prefWidth="121.0" style="-fx-background-color: pink;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="lbl_foodName" layoutX="10.0" layoutY="150.0" text="&lt;Food Name Placeholder&gt;">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_restaurantPlaceholder" layoutX="10.0" layoutY="162.0" text="&lt;Restaurant Placeholder&gt;">
+         <font>
+            <Font size="7.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl_price" layoutX="111.0" layoutY="170.0" text="&lt;PRICE&gt;">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

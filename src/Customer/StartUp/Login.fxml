@@ -17,7 +17,7 @@
                </image>
             </ImageView>
             <TextField fx:id="tf_email" layoutX="44.0" layoutY="457.0" prefHeight="26.0" prefWidth="250.0" promptText="juandelacruz@gmail.com" style="-fx-background-color: transparent;" />
-            <PasswordField fx:id="pf_password" layoutX="44.0" layoutY="515.0" prefHeight="26.0" prefWidth="244.0" promptText="Must be 8 characters long" style="-fx-background-color: transparent;" />
+            <PasswordField fx:id="pf_password" layoutX="44.0" layoutY="515.0" prefHeight="26.0" prefWidth="244.0" promptText="Never share your password with anyone" style="-fx-background-color: transparent;" />
             <Button fx:id="btn_submit" layoutX="228.0" layoutY="675.0" mnemonicParsing="false" onAction="#toValidateLogin" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: transparent;" />
             <Button fx:id="btn_create" layoutX="132.0" layoutY="676.0" mnemonicParsing="false" onAction="#toSignUpPageHandler" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: transparent;" />
             <Button fx:id="btn_close" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#toStartUpPageHandler" prefHeight="26.0" prefWidth="28.0" style="-fx-background-color: transparent;" />

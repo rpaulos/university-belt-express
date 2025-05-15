@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -17,32 +18,34 @@
                   <Image url="@../../User%20Interface/Sign%20Up.png" />
                </image>
             </ImageView>
-            <TextField layoutX="20.0" layoutY="208.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: Transparent;">
+            <TextField fx:id="tf_email" layoutX="20.0" layoutY="208.0" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: Transparent;">
                <font>
                   <Font size="11.0" />
                </font>
             </TextField>
-            <TextField layoutX="15.0" layoutY="377.0" prefHeight="33.0" prefWidth="146.0" promptText="Juan" style="-fx-background-color: Transparent;">
+            <TextField fx:id="tf_firstName" layoutX="15.0" layoutY="377.0" prefHeight="33.0" prefWidth="146.0" promptText="Juan" style="-fx-background-color: Transparent;">
                <font>
                   <Font size="11.0" />
                </font>
             </TextField>
-            <TextField layoutX="174.0" layoutY="376.0" prefHeight="34.0" prefWidth="147.0" promptText="Dela Cruz" style="-fx-background-color: Transparent;">
+            <TextField fx:id="tf_lastName" layoutX="174.0" layoutY="376.0" prefHeight="34.0" prefWidth="147.0" promptText="Dela Cruz" style="-fx-background-color: Transparent;">
                <font>
                   <Font size="11.0" />
                </font>
             </TextField>
-            <TextField layoutX="16.0" layoutY="431.0" prefHeight="34.0" prefWidth="302.0" promptText="0912 345 6789" style="-fx-background-color: Transparent;">
+            <TextField fx:id="tf_phoneNumber" layoutX="16.0" layoutY="431.0" prefHeight="34.0" prefWidth="302.0" promptText="0912 345 6789" style="-fx-background-color: Transparent;">
                <font>
                   <Font size="11.0" />
                </font>
             </TextField>
             <Button fx:id="btn_close" layoutX="13.0" layoutY="15.0" mnemonicParsing="false" onAction="#toStartUpPageHandler" prefHeight="26.0" prefWidth="36.0" style="-fx-background-color: transparent;" />
-            <PasswordField layoutX="18.0" layoutY="266.0" prefHeight="35.0" prefWidth="304.0" promptText="Password" style="-fx-background-color: transparent;">
+            <PasswordField fx:id="pf_password" layoutX="18.0" layoutY="266.0" prefHeight="35.0" prefWidth="304.0" promptText="Password" style="-fx-background-color: transparent;">
                <font>
                   <Font size="11.0" />
                </font>
             </PasswordField>
+            <Button fx:id="btn_submit" layoutX="18.0" layoutY="691.0" mnemonicParsing="false" onAction="#submitButtonHandler" prefHeight="31.0" prefWidth="304.0" style="-fx-background-color: transparent;" />
+            <ComboBox fx:id="cb_partnerSchools" layoutX="23.0" layoutY="551.0" prefHeight="31.0" prefWidth="294.0" promptText="Partner Schools" style="-fx-background-color: transparent;" />
          </children>
       </AnchorPane>
    </children>
