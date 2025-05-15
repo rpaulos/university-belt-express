@@ -47,6 +47,19 @@ public class StartUpController {
     }
 
     @FXML
+    public void toLoginWithFacebookPageHandler(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginFacebook.fxml"));
+
+        root = loader.load();
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
+    @FXML
     public void toSignUpPageHandler(ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SignUp.fxml"));
 

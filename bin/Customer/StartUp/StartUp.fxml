@@ -25,7 +25,7 @@
                   <Font size="1.0" />
                </font>
             </Button>
-            <Button fx:id="loginWithFacebookButton" layoutX="28.0" layoutY="594.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="283.0" style="-fx-background-color: transparent;">
+            <Button fx:id="loginWithFacebookButton" layoutX="28.0" layoutY="594.0" mnemonicParsing="false" onAction="#toLoginWithFacebookPageHandler" prefHeight="36.0" prefWidth="283.0" style="-fx-background-color: transparent;">
                <font>
                   <Font size="1.0" />
                </font>
