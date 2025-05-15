@@ -63,22 +63,28 @@ public class CustomerDatabaseHandler {
     // Method to validate either mobile number and password
     // or the email and password
 
-    public static boolean validateLoginCredentials(String email_address, String phone_number) {
+    public static boolean validateLoginCredentials(String email, String password) {
         getInstance();
-        String query = "SELECT * FROM customer WHERE email_address ='" + email_address + "and phone_number = '" + phone_number + "'";
-        
-        ResultSet result = handler.execQuery(query);
 
-        try {
+        String query = "SELECT * FROM customer WHERE customer_email = ? AND customer_password = ?";
+        
+        try (Connection conn = getDBConnection();
+            PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setString(1, email);
+            pstmt.setString(2, password);
+
+            ResultSet result = pstmt.executeQuery();
+
             if (result.next()) {
                 return true;
             }
-        } catch (SQLException e) { 
+
+        } catch (SQLException e) {
+            System.out.println("Error validating credentials: " + e.getMessage());
             e.printStackTrace();
         }
+
         return false;
     }
-
-
-
 }

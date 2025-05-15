@@ -184,10 +184,20 @@ INSERT INTO product (product_ID, restaurant_ID, price_range_ID, product_name, pr
       
 SELECT * FROM product;
 
-SELECT * FROM customers;
+SELECT * FROM restaurant;
 
-HELLO TRISTAN
+-- Alter the table to add a password field
+ALTER TABLE customer
+ADD COLUMN customer_password VARCHAR(30) NOT NULL
+AFTER customer_email;
 
+UPDATE customer SET customer_password = 'password123' WHERE customer_ID = '2023-00001';
+UPDATE customer SET customer_password = 'securePass456' WHERE customer_ID = '2023-00002';
+UPDATE customer SET customer_password = 'mySecret789' WHERE customer_ID = '2023-00003';
+UPDATE customer SET customer_password = 'tristanPwd2025' WHERE customer_ID = '2023-00004';
+UPDATE customer SET customer_password = 'jaredKey321' WHERE customer_ID = '2023-00005';
+
+SELECT * FROM customer;
 
 
     
