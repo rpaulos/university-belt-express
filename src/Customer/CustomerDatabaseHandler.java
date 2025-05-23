@@ -60,9 +60,7 @@ public class CustomerDatabaseHandler {
         return affectedRows;
     }
 
-    // Method to validate either mobile number and password
-    // or the email and password
-
+    // Method to validate either email and password of a customer
     public static boolean validateLoginCredentials(String email, String password) {
         getInstance();
 
@@ -84,7 +82,54 @@ public class CustomerDatabaseHandler {
             System.out.println("Error validating credentials: " + e.getMessage());
             e.printStackTrace();
         }
+        return false;
+    }
 
+    // Method to validate email address because it needs to be unique
+    public static boolean validateUniqueEmail(String email) {
+        getInstance();
+
+        String query = "SELECT * FROM customer WHERE customer_email = ?";
+        
+        try (Connection conn = getDBConnection();
+            PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setString(1, email);
+
+            ResultSet result = pstmt.executeQuery();
+
+            if (result.next()) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error validating credentials: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    // Method to validate phone number because it needs to be unique
+    public static boolean validateUniquePhoneNumber(String phoneNumber) {
+        getInstance();
+
+        String query = "SELECT * FROM customer WHERE customer_phone_number = ?";
+        
+        try (Connection conn = getDBConnection();
+            PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setString(1, phoneNumber);
+
+            ResultSet result = pstmt.executeQuery();
+
+            if (result.next()) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error validating credentials: " + e.getMessage());
+            e.printStackTrace();
+        }
         return false;
     }
 }
