@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="956.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Business.BusinessStartUp.BusinessSignInController">
    <children>
-      <ImageView fitHeight="956.0" fitWidth="440.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="813.0" fitWidth="341.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../User%20Interface/Business%20Sign%20In.png" />
          </image>
       </ImageView>
-      <Button fx:id="signinbtn" layoutX="22.0" layoutY="884.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="395.0" style="-fx-background-color: D70F64; -fx-background-radius: 8;" text="Sign In" textFill="WHITE">
+      <Button fx:id="signinbtn" layoutX="34.0" layoutY="670.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="259.0" style="-fx-background-color: D70F64; -fx-background-radius: 8;" text="Sign In" textFill="WHITE" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <TextField layoutX="61.0" layoutY="598.0" prefHeight="26.0" prefWidth="312.0" promptText="ex@email.com" style="-fx-background-color: transparent;" />
-      <TextField layoutX="61.0" layoutY="672.0" prefHeight="26.0" prefWidth="312.0" style="-fx-background-color: transparent;" />
+      <TextField layoutX="47.0" layoutY="459.0" prefHeight="26.0" prefWidth="226.0" promptText="ex@email.com" style="-fx-background-color: transparent;" />
+      <TextField layoutX="46.0" layoutY="516.0" prefHeight="26.0" prefWidth="243.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>
