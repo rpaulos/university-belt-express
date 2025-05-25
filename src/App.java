@@ -18,7 +18,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/Customer/StartUp/StartUp.fxml"));
 
-        primaryStage.setTitle("University Belt Express");
+        primaryStage.setTitle("U-Belt Express");
         primaryStage.setScene(new Scene(root, 340, 740));
         primaryStage.show();
     }
