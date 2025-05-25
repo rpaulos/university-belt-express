@@ -16,7 +16,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/Business/BusinessStartUp/BusinessSignIn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Customer/StartUp/StartUp.fxml"));
 
         primaryStage.setTitle("University Belt Express");
         primaryStage.setScene(new Scene(root, 340, 740));
