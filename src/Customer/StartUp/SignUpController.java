@@ -98,6 +98,12 @@ public class SignUpController {
             return;
         }
 
+        // Checks if phone number is the correct length
+        if (!phoneNumber.matches("^\\d{11}$")) {
+            System.out.println("Invalid phone number.");
+            return;
+        }
+
         // Checks if phone number already exists in the database
         if (CustomerDatabaseHandler.phoneNumberExists(phoneNumber)) {
             System.out.println("Phone number already registered");
