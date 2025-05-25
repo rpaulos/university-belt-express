@@ -135,7 +135,7 @@ public class CustomerDatabaseHandler {
     }
 
     // Customer ID generator
-    public static String generateNextCustomerID() {
+    public static String generateCustomerID() {
         getInstance();
 
         String currentYear = String.valueOf(Year.now().getValue());
@@ -165,4 +165,47 @@ public class CustomerDatabaseHandler {
 
         return null;
     }
+
+    // Generate the customer ID based on the school the customer is enrolled
+    public static String getUniversityID(String selectedSchool) {
+        return switch (selectedSchool) {
+            case "University of Santo Tomas" -> "UST-0001";
+            case "National University" -> "NU-0002";
+            case "Far Eastern University" -> "FEU-0003";
+            case "Centro Escolar University" -> "CEU-0004";
+            default -> "UNKNOWN";
+        };
+    }
+
+
+    public static boolean insertCustomer(String email, String password, String firstName, String lastName, String phoneNumber, String selectedSchool) {
+        getInstance();
+
+        String customerID = generateCustomerID(); // e.g., 2025-00001
+        String universityID = getUniversityID(selectedSchool); // e.g., NU-0002
+
+        String query = "INSERT INTO customer (customer_id, customer_email, customer_password, customer_first_name, customer_last_name, customer_phone_number, university_id) " +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+        try (Connection conn = getDBConnection();
+            PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setString(1, customerID);
+            pstmt.setString(2, email);
+            pstmt.setString(3, password);
+            pstmt.setString(4, firstName);
+            pstmt.setString(5, lastName);
+            pstmt.setString(6, phoneNumber);
+            pstmt.setString(7, universityID);
+
+            int rowsAffected = pstmt.executeUpdate();
+            return rowsAffected > 0;
+
+        } catch (SQLException e) {
+            System.out.println("Error inserting customer: " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
