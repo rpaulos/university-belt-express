@@ -26,9 +26,9 @@
             <Button layoutX="249.0" layoutY="13.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
             <Button layoutX="7.0" layoutY="12.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="35.0" style="-fx-background-color: transparent;" />
             <TextField layoutX="60.0" layoutY="77.0" prefHeight="26.0" prefWidth="244.0" promptText="What are you craving?" style="-fx-background-color: transparent;" />
-            <ScrollPane fitToWidth="true" layoutX="10.0" layoutY="252.0" prefHeight="433.0" prefWidth="330.0" style="-fx-background-color: Transparent;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <ScrollPane fitToWidth="true" layoutX="10.0" layoutY="246.0" prefHeight="440.0" prefWidth="340.0" style="-fx-background-color: Transparent;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <content>
-                  <GridPane fx:id="cardGrid" gridLinesVisible="true" hgap="5.0" prefHeight="350.0" prefWidth="338.0" style="-fx-background-color: transparent; -fx-alignment: center;" vgap="5.0">
+                  <GridPane fx:id="cardGrid" hgap="5.0" prefHeight="350.0" prefWidth="338.0" style="-fx-background-color: transparent; -fx-alignment: center;" vgap="5.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" prefWidth="100.0" />
