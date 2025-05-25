@@ -28,19 +28,11 @@ public class LandingPageController {
 
     @FXML
     private void handleCustomerButton(ActionEvent event) throws IOException {
-        // Parent root = FXMLLoader.load(getClass().getResource("/Customer/StartUp/StartUp.fxml"));
-        // Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        // stage.setScene(new Scene(root, 340, 740));
-        // stage.show();
         switchScene(event, "/Customer/StartUp/StartUp.fxml");
     }
 
     @FXML
     private void handleBusinessButton(ActionEvent event) throws IOException {
-        // Parent root = FXMLLoader.load(getClass().getResource("/Business/BusinessStartUp/BusinessLogin.fxml"));
-        // Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        // stage.setScene(new Scene(root, 340, 740));
-        // stage.show();
         switchScene(event, "/Business/BusinessStartUp/BusinessLogin.fxml");
     }
 }
