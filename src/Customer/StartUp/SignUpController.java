@@ -72,6 +72,7 @@ public class SignUpController {
     @FXML
     void submitButtonHandler(ActionEvent event) throws IOException{
 
+        // Get value from text fields
         String email = tf_email.getText().trim();
         String password = pf_password.getText().trim();
         String firstName = tf_firstName.getText().trim();
@@ -79,48 +80,38 @@ public class SignUpController {
         String phoneNumber = tf_phoneNumber.getText().trim();
         String selectedSchool = cb_partnerSchools.getValue();
 
+        // Checks if all fields are filled out
+        if (email.isEmpty() || password.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || phoneNumber.isEmpty() || selectedSchool == null) {
+            System.out.println("Please fill out all fields");
+            return;
+        }
+
+        // Email domain validation
         if (!email.matches("^[\\w.-]+@students\\.(national-u\\.edu\\.ph|ust\\.edu\\.ph|feu\\.edu\\.ph|ceu\\.edu\\.ph)$")) {
             //showAlert(Alert.AlertType.ERROR, "Invalid Email", "Please use your university email.");
             System.out.println("Invalid Email");
             return;
         }
 
+        // Checks if email is unique
         if (CustomerDatabaseHandler.validateUniqueEmail(email)) {
             //showAlert(Alert.AlertType.ERROR, "Email Exists", "This email is already registered.");
             System.out.println("Email already registered");
             return;
         }
 
+        // Checks if phone number is unique
         if (CustomerDatabaseHandler.validateUniquePhoneNumber(phoneNumber)) {
             //showAlert(Alert.AlertType.ERROR, "Phone Number Exists", "This email is already registered.");
             System.out.println("Invalid phone number");
             return;
-        } else {
-            System.out.println("Valid number");
         }
 
+        if (password.length() < 6) {
+            System.out.println("Password must be at least 6 characters long.");
+            return;
+        }
 
-        // Validate fields
-            // Check if email is in email format (paulosr@students.national-u.edu.ph, paulosr@students.ust.edu.ph, paulosr@students.feu.edu.ph, paulosr@students.ceu.edu.ph))
-            // Check if email and number is already in use
-            // Create the account and insert to database
-        
-        // Go back to startup
-        // FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
-
-        // root = loader.load();
-
-        // stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        // scene = new Scene(root);
-        // stage.setScene(scene);
-        // stage.show();
+        System.out.println("Account Created");
     }
-
-    // Submit button
-        // Get text from all fields
-        // Pass text to validate function
-        // Check if email and password is already in use
-        // Create the account
-        // Go back to startup
-
 }
