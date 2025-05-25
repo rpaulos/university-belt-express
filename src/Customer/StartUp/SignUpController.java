@@ -88,22 +88,19 @@ public class SignUpController {
 
         // Email domain validation
         if (!email.matches("^[\\w.-]+@students\\.(national-u\\.edu\\.ph|ust\\.edu\\.ph|feu\\.edu\\.ph|ceu\\.edu\\.ph)$")) {
-            //showAlert(Alert.AlertType.ERROR, "Invalid Email", "Please use your university email.");
             System.out.println("Invalid Email");
             return;
         }
 
-        // Checks if email is unique
-        if (CustomerDatabaseHandler.validateUniqueEmail(email)) {
-            //showAlert(Alert.AlertType.ERROR, "Email Exists", "This email is already registered.");
+        // Checks if email already exists in the database
+        if (CustomerDatabaseHandler.emailExists(email)) {
             System.out.println("Email already registered");
             return;
         }
 
-        // Checks if phone number is unique
-        if (CustomerDatabaseHandler.validateUniquePhoneNumber(phoneNumber)) {
-            //showAlert(Alert.AlertType.ERROR, "Phone Number Exists", "This email is already registered.");
-            System.out.println("Invalid phone number");
+        // Checks if phone number already exists in the database
+        if (CustomerDatabaseHandler.phoneNumberExists(phoneNumber)) {
+            System.out.println("Phone number already registered");
             return;
         }
 
@@ -112,6 +109,7 @@ public class SignUpController {
             return;
         }
 
+        // Call function to add account to database
         System.out.println("Account Created");
     }
 }

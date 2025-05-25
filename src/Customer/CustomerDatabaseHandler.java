@@ -60,7 +60,7 @@ public class CustomerDatabaseHandler {
         return affectedRows;
     }
 
-    // Method to validate either email and password of a customer
+    // Login validation of email and password of the customer
     public static boolean validateLoginCredentials(String email, String password) {
         getInstance();
 
@@ -85,8 +85,8 @@ public class CustomerDatabaseHandler {
         return false;
     }
 
-    // Method to validate email address because it needs to be unique
-    public static boolean validateUniqueEmail(String email) {
+    // Checks if email exists in the database
+    public static boolean emailExists(String email) {
         getInstance();
 
         String query = "SELECT * FROM customer WHERE customer_email = ?";
@@ -109,8 +109,8 @@ public class CustomerDatabaseHandler {
         return false;
     }
 
-    // Method to validate phone number because it needs to be unique
-    public static boolean validateUniquePhoneNumber(String phoneNumber) {
+    // Checks if phone number exists in the database
+    public static boolean phoneNumberExists(String phoneNumber) {
         getInstance();
 
         String query = "SELECT * FROM customer WHERE customer_phone_number = ?";
@@ -132,4 +132,6 @@ public class CustomerDatabaseHandler {
         }
         return false;
     }
+
+    
 }
