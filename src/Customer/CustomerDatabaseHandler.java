@@ -2,6 +2,7 @@ package Customer;
 
 import Database.DatabaseCredentials;
 import java.sql.*;
+import java.time.Year;
 
 public class CustomerDatabaseHandler {
     private static CustomerDatabaseHandler handler = null;
@@ -133,5 +134,35 @@ public class CustomerDatabaseHandler {
         return false;
     }
 
-    
+    // Customer ID generator
+    public static String generateNextCustomerID() {
+        getInstance();
+
+        String currentYear = String.valueOf(Year.now().getValue());
+        String prefix = currentYear + "-";
+        String query = "SELECT customer_id FROM customer WHERE customer_id LIKE ? ORDER BY customer_id DESC LIMIT 1";
+
+        try(Connection conn = getDBConnection();
+            PreparedStatement pstmt = conn.prepareStatement(query)) {
+
+            pstmt.setString(1, prefix + "%");
+            ResultSet result = pstmt.executeQuery();
+
+            int nextNumber = 1;
+
+            if (result.next()) {
+                String lastID = result.getString("customer_id");
+                String numberPart = lastID.split("-")[1];
+                nextNumber = Integer.parseInt(numberPart) + 1;
+            }
+
+            return String.format("%s%05d", prefix, nextNumber);
+
+        } catch (SQLException e) {
+            System.out.println("Error getting customer ID: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 }
