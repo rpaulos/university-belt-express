@@ -177,12 +177,12 @@ public class CustomerDatabaseHandler {
         };
     }
 
-
+    // Create the account
     public static boolean insertCustomer(String email, String password, String firstName, String lastName, String phoneNumber, String selectedSchool) {
         getInstance();
 
-        String customerID = generateCustomerID(); // e.g., 2025-00001
-        String universityID = getUniversityID(selectedSchool); // e.g., NU-0002
+        String customerID = generateCustomerID();
+        String universityID = getUniversityID(selectedSchool);
 
         String query = "INSERT INTO customer (customer_id, customer_email, customer_password, customer_first_name, customer_last_name, customer_phone_number, university_id) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?)";
