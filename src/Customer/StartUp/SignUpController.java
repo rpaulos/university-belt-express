@@ -1,5 +1,6 @@
 package Customer.StartUp;
 
+import Customer.CustomerDatabaseHandler;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -8,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
@@ -47,65 +50,89 @@ public class SignUpController {
     @FXML
     public void initialize() {
         cb_partnerSchools.getItems().addAll(
-            "National University Manila",
-            "Far Easter University",
+            "National University - Manila",
+            "Far Eastern University",
             "University of Santo Tomas",
-            "Centro Escobar University"
+            "Centro Escolar University"
         );
 }
-    @FXML
-    void toStartUpPageHandler(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
+    private void switchScene(ActionEvent event, String fxmlFile) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+        Parent root = loader.load();
 
-        root = loader.load();
-
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    void toStartUpPageHandler(ActionEvent event) throws IOException{
+        switchScene(event, "StartUp.fxml");
+        // FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
+
+        // root = loader.load();
+
+        // stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        // scene = new Scene(root);
+        // stage.setScene(scene);
+        // stage.show();
 
     }
 
     @FXML
     void submitButtonHandler(ActionEvent event) throws IOException{
 
-        String email = tf_email.getText();
-        String password = pf_password.getText();
-        String firstName = tf_firstName.getText();
-        String lastName = tf_lastName.getText();
-        String phoneNumber = tf_phoneNumber.getText();
+        // Get value from text fields
+        String email = tf_email.getText().trim();
+        String password = pf_password.getText().trim();
+        String firstName = tf_firstName.getText().trim();
+        String lastName = tf_lastName.getText().trim();
+        String phoneNumber = tf_phoneNumber.getText().trim();
         String selectedSchool = cb_partnerSchools.getValue();
 
-        System.out.println("Email: " + email);
-        System.out.println("Password: " + password);
-        System.out.println("FName: " + firstName);
-        System.out.println("LName: " + lastName);
-        System.out.println("Number: " + phoneNumber);
-        System.out.println("School: " + selectedSchool);
+        // Checks if all fields are filled out
+        if (email.isEmpty() || password.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || phoneNumber.isEmpty() || selectedSchool == null) {
+            System.out.println("Please fill out all fields");
+            return;
+        }
 
-        // Validate fields
-            // Check if email is in email format (gmail, yahoo, email, outllook, edu)
-            // Check if email and number is in use
-            // Create the account and insert to database
-            // Go back to startup
+        // Email domain validation
+        if (!email.matches("^[\\w.-]+@students\\.(national-u\\.edu\\.ph|ust\\.edu\\.ph|feu\\.edu\\.ph|ceu\\.edu\\.ph)$")) {
+            System.out.println("Invalid Email");
+            return;
+        }
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
+        // Checks if email already exists in the database
+        if (CustomerDatabaseHandler.emailExists(email)) {
+            System.out.println("Email already registered");
+            return;
+        }
 
-        root = loader.load();
+        // Checks if phone number is the correct length
+        if (!phoneNumber.matches("^09\\d{9}$")) {
+            System.out.println("Invalid phone number.");
+            return;
+        }
 
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-        
+        // Checks if phone number already exists in the database
+        if (CustomerDatabaseHandler.phoneNumberExists(phoneNumber)) {
+            System.out.println("Phone number already registered");
+            return;
+        }
 
+        if (password.length() < 6) {
+            System.out.println("Password must be at least 6 characters long.");
+            return;
+        }
+
+        String universityID = CustomerDatabaseHandler.getUniversityID(selectedSchool);
+
+        CustomerDatabaseHandler.insertCustomer(email, password, firstName, lastName, phoneNumber, selectedSchool);
+
+        // TODO: Pop up message for account created
+
+        // Go back to startup page
+        switchScene(event, "StartUp.fxml");
     }
-
-    // Submit button
-        // Get text from all fields
-        // Pass text to validate function
-        // Check if email and password is already in use
-        // Create the account
-        // Go back to startup
-
 }
