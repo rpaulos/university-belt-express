@@ -50,10 +50,10 @@ public class SignUpController {
     @FXML
     public void initialize() {
         cb_partnerSchools.getItems().addAll(
-            "National University Manila",
-            "Far Easter University",
+            "National University - Manila",
+            "Far Eastern University",
             "University of Santo Tomas",
-            "Centro Escobar University"
+            "Centro Escolar University"
         );
 }
     @FXML
@@ -111,5 +111,9 @@ public class SignUpController {
 
         // Call function to add account to database
         System.out.println("Account Created");
+
+        String universityID = CustomerDatabaseHandler.getUniversityID(selectedSchool);
+
+        CustomerDatabaseHandler.insertCustomer(email, password, firstName, lastName, phoneNumber, selectedSchool);
     }
 }

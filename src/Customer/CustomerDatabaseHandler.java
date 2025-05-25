@@ -170,7 +170,7 @@ public class CustomerDatabaseHandler {
     public static String getUniversityID(String selectedSchool) {
         return switch (selectedSchool) {
             case "University of Santo Tomas" -> "UST-0001";
-            case "National University" -> "NU-0002";
+            case "National University - Manila" -> "NU-0002";
             case "Far Eastern University" -> "FEU-0003";
             case "Centro Escolar University" -> "CEU-0004";
             default -> "UNKNOWN";
