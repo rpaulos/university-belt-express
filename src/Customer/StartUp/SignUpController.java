@@ -68,7 +68,8 @@ public class SignUpController {
 
     @FXML
     void toStartUpPageHandler(ActionEvent event) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
+        switchScene(event, "StartUp.fxml");
+        // FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
 
         // root = loader.load();
 
