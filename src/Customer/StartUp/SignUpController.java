@@ -99,7 +99,7 @@ public class SignUpController {
         }
 
         // Checks if phone number is the correct length
-        if (!phoneNumber.matches("^\\d{11}$")) {
+        if (!phoneNumber.matches("^09\\d{9}$")) {
             System.out.println("Invalid phone number.");
             return;
         }
