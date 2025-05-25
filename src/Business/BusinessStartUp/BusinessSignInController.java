@@ -2,13 +2,17 @@ package Business.BusinessStartUp;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class BusinessSignInController {
 
     @FXML
-    private Button logsigninbtn;
+    private Button signinbtn;
 
     @FXML
-    private Button logsignupbtn;
+    private TextField signinemailadd;
+
+    @FXML
+    private TextField signinpassword;
 
 }
