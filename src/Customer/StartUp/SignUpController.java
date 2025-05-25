@@ -56,16 +56,26 @@ public class SignUpController {
             "Centro Escolar University"
         );
 }
+    private void switchScene(ActionEvent event, String fxmlFile) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     @FXML
     void toStartUpPageHandler(ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("StartUp.fxml"));
 
-        root = loader.load();
+        // root = loader.load();
 
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        // stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        // scene = new Scene(root);
+        // stage.setScene(scene);
+        // stage.show();
 
     }
 
@@ -115,11 +125,13 @@ public class SignUpController {
             return;
         }
 
-        // Call function to add account to database
-        System.out.println("Account Created");
-
         String universityID = CustomerDatabaseHandler.getUniversityID(selectedSchool);
 
         CustomerDatabaseHandler.insertCustomer(email, password, firstName, lastName, phoneNumber, selectedSchool);
+
+        // TODO: Pop up message for account created
+
+        // Go back to startup page
+        switchScene(event, "StartUp.fxml");
     }
 }
