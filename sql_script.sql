@@ -199,6 +199,12 @@ UPDATE customer SET customer_password = 'jaredKey321' WHERE customer_ID = '2023-
 
 SELECT * FROM customer;
 
+DELETE FROM customer WHERE customer_ID = '2025-00001';
+
+ALTER TABLE customer
+MODIFY COLUMN customer_email VARCHAR(100) NOT NULL UNIQUE;
+
+
 
     
 
