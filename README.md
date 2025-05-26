@@ -52,9 +52,9 @@ The goal of UBELT-ExPress is to:
   
 
 ## Contributors  
-- **[Rae Paulos](https://github.com/rpaulos)** – Lead Frontend & Backend Developer
-- **[Tristan Sevilla](https://github.com/Hyakkki)** - Backend Developer & Cybersecurity
-- **Jared Pilapil** - Backend Developer & Data Security
+- **[Rae Paulos](https://github.com/rpaulos)** – Lead Frontend, Backend Developer, & Customer Side
+- **[Tristan Sevilla](https://github.com/Hyakkki)** - Frontend, Backend Developer & Business Side
+- **[Jared Pilapil](https://github.com/RedJared)** - Frontend, Backend Developer & Admin Side
 
 ## License  
 This project is for **personal and educational purposes** and is not intended for commercial use.  
