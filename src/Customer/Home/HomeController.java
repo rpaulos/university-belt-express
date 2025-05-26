@@ -73,11 +73,17 @@ public class HomeController {
         new FoodItem("BBQ Skewers", "110", "Mang Inasal"),
         new FoodItem("Burger Steak", "145", "Jollibee"),
         new FoodItem("Tempura", "190", "Tokyo Tokyo"),
+        new FoodItem("Shawarma", "100", "Turks"),
         new FoodItem("Shawarma", "100", "Turks")
     );
 
 
     public void initialize() {
+        cardGrid.getChildren().clear();
+        cardGrid.getRowConstraints().clear();
+        cardGrid.getColumnConstraints().clear();
+
+
         int columns = 1;
         int col = 0;
         int row = 0;

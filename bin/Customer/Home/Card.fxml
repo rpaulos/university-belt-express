@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="228.0" prefWidth="340.0" style="-fx-background-radius: 15; -fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.Home.CardController">
    <children>
-      <AnchorPane layoutX="11.2" layoutY="0.8" prefHeight="233.0" prefWidth="319.0" style="-fx-background-color: #F3F3E6; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="11.2" layoutY="0.8" prefHeight="233.0" prefWidth="319.0" style="-fx-background-color: FFFFFF; -fx-border-color: d9d9d9; -fx-border-radius: 15; -fx-border-width: 2; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="20.0" layoutY="15.8" prefHeight="153.0" prefWidth="289.0" style="-fx-background-color: efbb20; -fx-background-radius: 13 13 0 0;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
-            <Label fx:id="lbl_foodName" layoutX="15.0" layoutY="164.0" text="Restaurant Name">
+            <AnchorPane layoutX="23.2" layoutY="17.599999999999998" prefHeight="148.0" prefWidth="277.0" style="-fx-background-color: efbb20; -fx-background-radius: 13 13 0 0;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <ImageView fitHeight="142.0" fitWidth="269.0" layoutX="3.4" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="3.4" AnchorPane.rightAnchor="2.7777709960938637">
+                     <image>
+                        <Image url="@../../../../../_DSC8843%201.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label fx:id="lbl_foodName" layoutX="21.0" layoutY="164.0" text="Restaurant Name">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_restaurantPlaceholder" layoutX="17.0" layoutY="190.0" text="ETA">
+            <Label fx:id="lbl_restaurantPlaceholder" layoutX="21.0" layoutY="190.0" text="ETA">
                <font>
                   <Font size="11.0" />
                </font>
