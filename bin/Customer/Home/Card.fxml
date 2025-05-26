@@ -12,7 +12,7 @@
          <children>
             <AnchorPane layoutX="23.2" layoutY="17.599999999999998" prefHeight="148.0" prefWidth="277.0" style="-fx-background-color: efbb20; -fx-background-radius: 13 13 0 0;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="15.0">
                <children>
-                  <ImageView fitHeight="142.0" fitWidth="269.0" layoutX="3.4" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="3.4" AnchorPane.rightAnchor="2.7777709960938637">
+                  <ImageView fitHeight="148.0" fitWidth="277.0" layoutX="3.2" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.799999999999898">
                      <image>
                         <Image url="@../../../../../_DSC8843%201.png" />
                      </image>
