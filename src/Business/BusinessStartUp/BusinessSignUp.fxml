@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Business.BusinessStartUp.BusinessSignUpController">
+   <children>
+      <ImageView fitHeight="740.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../User%20Interface/Business%20Sign%20Up.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="companynametextf" layoutX="20.0" layoutY="226.0" prefHeight="26.0" prefWidth="296.0" promptText="U-Belt Express" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font></TextField>
+      <TextField fx:id="addresstextf" layoutX="19.0" layoutY="299.0" prefHeight="26.0" prefWidth="297.0" promptText="Block 1 Lot 1" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="postalcodetextf" layoutX="21.0" layoutY="361.0" prefHeight="26.0" prefWidth="135.0" promptText="1109" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font></TextField>
+      <TextField fx:id="citytextf" layoutX="178.0" layoutY="361.0" prefHeight="26.0" prefWidth="137.0" promptText="Quezon City" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="signupfnametextf" layoutX="19.0" layoutY="484.0" prefHeight="26.0" prefWidth="140.0" promptText="Juan" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="signuplnametextf" layoutX="177.0" layoutY="484.0" prefHeight="26.0" prefWidth="139.0" promptText="Dela Cruz" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="signupemailtextf" layoutX="18.0" layoutY="543.0" prefHeight="26.0" prefWidth="168.0" promptText="juandelacruz@email.com" style="-fx-background-color: transparent;" />
+      <PasswordField fx:id="signuppasswordf" layoutX="202.0" layoutY="543.0" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: transparent;" />
+      <CheckBox fx:id="termscb" layoutX="24.0" layoutY="610.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="1.0" style="-fx-background-radius: 4;" />
+      <Button layoutX="8.0" layoutY="9.0" mnemonicParsing="false" onAction="#toReturnToLogintHandler" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="21.0" layoutY="692.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="299.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>

@@ -12,7 +12,8 @@
             <Image url="@../../User%20Interface/Business%20Login.png" />
          </image>
       </ImageView>
-      <Button fx:id="logsigninbtn" layoutX="26.0" layoutY="543.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="290.0" style="-fx-background-color: transparent; -fx-border-color: #1E1E1E; -fx-border-radius: 8;" text="Sign in with Email" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
-      <Button fx:id="logsignupbtn" layoutX="24.0" layoutY="616.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="290.0" style="-fx-background-color: transparent; -fx-border-color: #1E1E1E; -fx-border-radius: 8;" text="Sign up with Email" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+      <Button fx:id="logsigninbtn" layoutX="26.0" layoutY="543.0" mnemonicParsing="false" onAction="#toSignInWithEmailHandler" prefHeight="45.0" prefWidth="290.0" style="-fx-background-color: transparent; -fx-border-color: #1E1E1E; -fx-border-radius: 8;" text="Sign in with Email" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+      <Button fx:id="logsignupbtn" layoutX="24.0" layoutY="616.0" mnemonicParsing="false" onAction="#toSignUpnWithEmailHandler" prefHeight="45.0" prefWidth="290.0" style="-fx-background-color: transparent; -fx-border-color: #1E1E1E; -fx-border-radius: 8;" text="Sign up with Email" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+      <Button fx:id="logreturnbtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="30.0" style="-fx-background-color: transparent;" />
    </children>
 </AnchorPane>
