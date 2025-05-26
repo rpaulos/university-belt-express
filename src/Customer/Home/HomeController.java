@@ -78,7 +78,7 @@ public class HomeController {
 
 
     public void initialize() {
-        int columns = 2;
+        int columns = 1;
         int col = 0;
         int row = 0;
 

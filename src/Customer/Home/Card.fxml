@@ -4,23 +4,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="159.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.Home.CardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="228.0" prefWidth="340.0" style="-fx-background-radius: 15; -fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.Home.CardController">
    <children>
-      <AnchorPane layoutX="11.2" layoutY="-14.0" prefHeight="134.0" prefWidth="121.0" style="-fx-background-color: pink;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
-      <Label fx:id="lbl_foodName" layoutX="10.0" layoutY="150.0" text="&lt;Food Name Placeholder&gt;">
+      <AnchorPane layoutX="11.2" layoutY="0.8" prefHeight="233.0" prefWidth="319.0" style="-fx-background-color: #F3F3E6; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="20.0" layoutY="15.8" prefHeight="153.0" prefWidth="289.0" style="-fx-background-color: efbb20; -fx-background-radius: 13 13 0 0;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
+            <Label fx:id="lbl_foodName" layoutX="15.0" layoutY="164.0" text="Restaurant Name">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_restaurantPlaceholder" layoutX="17.0" layoutY="190.0" text="ETA">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lbl_price" layoutX="218.0" layoutY="204.0" prefHeight="15.0" prefWidth="95.0" style="-fx-alignment: center-right;" text="Price Range" textAlignment="RIGHT" wrapText="true">
          <font>
-            <Font size="10.0" />
-         </font>
-      </Label>
-      <Label fx:id="lbl_restaurantPlaceholder" layoutX="10.0" layoutY="162.0" text="&lt;Restaurant Placeholder&gt;">
-         <font>
-            <Font size="7.0" />
-         </font>
-      </Label>
-      <Label fx:id="lbl_price" layoutX="111.0" layoutY="170.0" text="&lt;PRICE&gt;">
-         <font>
-            <Font size="10.0" />
+            <Font name="System Bold" size="12.0" />
          </font>
       </Label>
    </children>
