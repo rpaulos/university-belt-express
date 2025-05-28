@@ -205,8 +205,26 @@ ALTER TABLE customer
 MODIFY COLUMN customer_email VARCHAR(100) NOT NULL UNIQUE;
 
 
-
+-- creates business_owner table (tristan 05/26/2025)
+CREATE TABLE business_owner (
+    business_owner_ID VARCHAR(15) PRIMARY KEY,
+    restaurant_ID VARCHAR(15) NOT NULL,
+    owner_first_name VARCHAR(30) NOT NULL,
+    owner_last_name VARCHAR(30) NOT NULL,
+    owner_email VARCHAR(100) UNIQUE NOT NULL,
+    owner_password VARCHAR(30) NOT NULL,
     
+    FOREIGN KEY (restaurant_ID)
+    REFERENCES restaurant(restaurant_ID)
+    ON DELETE CASCADE
+);
+
+SELECT * FROM business_owner;
+
+INSERT INTO business_owner (business_owner_ID, restaurant_ID, owner_first_name, owner_last_name, owner_email, owner_password)
+VALUES 
+	('BO-0001', 'R001', 'Juan', 'Dela Cruz', 'juandelacruz@email.com', 'jdc123');
+
 
 
     
