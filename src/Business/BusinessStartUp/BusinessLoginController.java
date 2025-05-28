@@ -51,5 +51,18 @@ public class BusinessLoginController {
         stage.show();
 
     }
+    
+     @FXML
+    public void toReturnOnLandingPage(ActionEvent event) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/LandingPage.fxml"));
+
+        root = loader.load();
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
 }
 
