@@ -1,6 +1,8 @@
 # university-belt-express  
 ## U-Belt Centric Food Delivery App: A Solution for Affordable Dining
 
+> ⚠️ *Encountered a problem with Git history — the final submitted version of the project is located inside the `FoodPanda` folder in this repository.*
+
 ## Overview  
 **U-Belt-ExPress** is a full-stack food delivery application developed for students and residents in the University Belt (U-Belt) area of Manila. Taking inspiration from platforms like Foodpanda, the app offers a fast, reliable, and cost-effective way to order food from local restaurants, eateries, and food stalls. It prioritizes affordability, accessibility, and simplicity to meet the needs of students and the wider academic community.
 
