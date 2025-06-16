@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Business.Class.BusinessAddProductController">
+   <children>
+      <ImageView fitHeight="740.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../User%20Interface/Business%20AddProduct.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tf_productName" layoutX="24.0" layoutY="325.0" prefHeight="26.0" prefWidth="293.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf_productPrice" layoutX="23.0" layoutY="488.0" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf_productQuantity" layoutX="176.0" layoutY="488.0" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn_upload" layoutX="230.0" layoutY="95.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: transparent;" />
+      <ImageView fx:id="img_productImage" fitHeight="160.0" fitWidth="300.0" layoutX="20.0" layoutY="123.0" nodeOrientation="INHERIT" pickOnBounds="true" />
+      <Button fx:id="btn_save" layoutX="23.0" layoutY="683.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="294.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_return" layoutX="12.0" layoutY="13.0" mnemonicParsing="false" onAction="#toReturntoHomePageAddHandler" prefHeight="34.0" prefWidth="33.0" style="-fx-background-color: transparent;" />
+      <TextArea fx:id="tfa_productDescription" layoutX="24.0" layoutY="383.0" prefHeight="71.0" prefWidth="292.0" style="-fx-background-color: transparent; -fx-faint-focus-color: transparent; -fx-border-color: transparent;" wrapText="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #e4e4e4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.Class.AdminController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btn_logout" layoutX="973.0" layoutY="640.0" mnemonicParsing="false" onAction="#logout" prefHeight="34.0" prefWidth="105.0" text="Logout" />
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="22.0" layoutY="20.8" prefHeight="601.0" prefWidth="1060.0" style="-fx-background-radius: 15;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="21.0">
+        <tabs>
+          <Tab text="Customer Details">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0 0 12 12;">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="505.0" prefWidth="219.0" style="-fx-background-color: FFBB00; -fx-background-radius: 12;" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <children>
+                              <TextField fx:id="tfCD_customerID" layoutX="16.0" layoutY="30.0" prefHeight="26.0" prefWidth="186.0" promptText="2025-00001" style="-fx-background-radius: 5;" />
+                              <Label layoutX="10.0" layoutY="11.0" text="CustomerID" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnCD_search" layoutX="136.0" layoutY="65.0" mnemonicParsing="false" onAction="#CD_search" prefHeight="26.0" prefWidth="65.0" style="-fx-background-radius: 5; -fx-background-color: #e4e4e4; -fx-border-color: #757575; -fx-border-radius: 5;" text="Search" />
+                              <Button fx:id="btnCD_delete" layoutX="64.0" layoutY="65.0" mnemonicParsing="false" onAction="#CD_delete" prefHeight="26.0" prefWidth="65.0" style="-fx-background-radius: 5; -fx-background-color: #e4e4e4; -fx-border-color: #757575; -fx-border-radius: 5;" text="Delete" />
+                              <Label layoutX="13.0" layoutY="108.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfCD_firstName" layoutX="19.0" layoutY="128.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-radius: 5; -fx-background-color: transparent;" />
+                              <Label layoutX="14.0" layoutY="155.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfCD_lastName" layoutX="19.0" layoutY="175.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-radius: 5; -fx-background-color: transparent;" />
+                              <TextField fx:id="tfCD_phoneNumber" layoutX="19.0" layoutY="239.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-radius: 5; -fx-background-color: transaparent;" />
+                              <Label layoutX="9.0" layoutY="219.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="lblCD_name" layoutX="245.0" layoutY="5.0" prefHeight="64.0" prefWidth="793.0" text="Name" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="43.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCD_customerID" layoutX="245.0" layoutY="54.0" prefHeight="30.0" prefWidth="327.0" text="CustomerID" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCD_phoneNumber" layoutX="592.0" layoutY="110.0" prefHeight="30.0" prefWidth="327.0" text="Phone Number" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_2" layoutX="592.0" layoutY="94.0" prefHeight="30.0" prefWidth="327.0" text="Phone Number" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_1" layoutX="245.0" layoutY="94.0" prefHeight="30.0" prefWidth="327.0" text="Email Address" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCD_email" layoutX="245.0" layoutY="110.0" prefHeight="30.0" prefWidth="327.0" text="Email Address" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableCD" layoutX="246.0" layoutY="202.0" prefHeight="319.0" prefWidth="482.0">
+                          <columns>
+                            <TableColumn fx:id="colCD_orderID" prefWidth="99.20001220703125" style="-fx-alignment: center;" text="order_ID" />
+                            <TableColumn fx:id="colCD_restaurantID" prefWidth="192.800048828125" style="-fx-alignment: center;" text="restaurant_ID" />
+                              <TableColumn fx:id="colCD_amount" prefWidth="192.800048828125" style="-fx-alignment: center;" text="amount" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="lbl_4" layoutX="244.0" layoutY="171.0" prefHeight="30.0" prefWidth="327.0" text="Transaction Log" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_3" layoutX="739.0" layoutY="201.0" prefHeight="30.0" prefWidth="231.0" text="Total Spent" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblCD_totalSpent" layoutX="739.0" layoutY="223.0" prefHeight="30.0" prefWidth="327.0" text="Amount" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Owner Details">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1060.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0 0 12 12;">
+                     <children>
+                        <AnchorPane layoutX="55.0" layoutY="70.0" prefHeight="510.0" prefWidth="219.0" style="-fx-background-color: FFBB00; -fx-background-radius: 12;" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <children>
+                              <Label layoutX="10.0" layoutY="112.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfOD_businessOwnerID" layoutX="12.0" layoutY="132.0" prefHeight="26.0" prefWidth="192.0" style="-fx-background-radius: 5; -fx-background-color: transparent;" />
+                              <TextField fx:id="tfOD_firstName" layoutX="14.0" layoutY="198.0" prefHeight="26.0" prefWidth="192.0" style="-fx-background-radius: 5; -fx-background-color: transparent;" />
+                              <Label layoutX="9.0" layoutY="178.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="252.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfOD_lastName" layoutX="14.0" layoutY="269.0" prefHeight="26.0" prefWidth="192.0" style="-fx-background-radius: 5; -fx-background-color: transparent;" />
+                              <Button fx:id="bttOD_search" layoutX="152.0" layoutY="69.0" mnemonicParsing="false" onAction="#OD_search" style="-fx-background-color: #e4e4e4; -fx-background-radius: 5; -fx-border-color: #757575; -fx-border-radius: 5;" text="Search" />
+                              <Button fx:id="btnOD_delete" layoutX="94.0" layoutY="69.0" mnemonicParsing="false" onAction="#OD_delete" style="-fx-background-color: #e4e4e4; -fx-background-radius: 5; -fx-border-color: #757575; -fx-border-radius: 5;" text="Delete" />
+                              <TextField fx:id="tfOD_restaurantID" layoutX="12.0" layoutY="30.0" prefHeight="26.0" prefWidth="192.0" promptText="R_RLMAN_00001_001" style="-fx-background-radius: 5;" />
+                              <Label layoutX="12.0" layoutY="13.0" text="RestaurantID">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="lblOD_businessOwnerName" layoutX="246.0" layoutY="4.0" prefHeight="64.0" prefWidth="777.0" text="Name" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="43.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblOD_restaurantID" layoutX="248.0" layoutY="50.0" prefHeight="30.0" prefWidth="722.0" text="RestaurantID">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_8" layoutX="251.0" layoutY="114.0" text="Email Address">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblOD_businessOwnerEmail" layoutX="250.0" layoutY="128.0" prefHeight="30.0" prefWidth="374.0" text="BusinessOwnerEmail" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblOD_businessName" layoutX="642.0" layoutY="128.0" prefHeight="30.0" prefWidth="404.0" text="BusinessName" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_7" layoutX="642.0" layoutY="114.0" text="Company Name">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tablePD" layoutX="248.0" layoutY="206.0" prefHeight="319.0" prefWidth="483.0">
+                          <columns>
+                            <TableColumn fx:id="colPD_orderID" prefWidth="116.800048828125" style="-fx-alignment: center;" text="order_ID" />
+                            <TableColumn fx:id="colPD_customerID" prefWidth="182.39996337890625" style="-fx-alignment: center;" text="customer_ID" />
+                              <TableColumn fx:id="colPD_amount" prefWidth="182.39996337890625" style="-fx-alignment: center;" text="amount" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="lbl_5" layoutX="250.0" layoutY="175.0" prefHeight="30.0" prefWidth="404.0" text="Transaction Log" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_6" layoutX="740.0" layoutY="209.0" text="Total Earned">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblOD_totalEarned" layoutX="740.0" layoutY="220.0" prefHeight="30.0" prefWidth="312.0" text="Total Earned" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblOD_businessOwnerID" layoutX="248.0" layoutY="66.0" prefHeight="30.0" prefWidth="722.0" text="BusinessOwnerID">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Product Details">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f2f2f2; -fx-background-radius: 0 0 12 12;">
+                     <children>
+                        <AnchorPane layoutX="35.0" layoutY="30.0" prefHeight="497.0" prefWidth="219.0" style="-fx-background-color: FFBB00; -fx-background-radius: 15;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="13.0" text="RestaurantID">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfPD_restaurantID" layoutX="22.0" layoutY="32.0" prefHeight="26.0" prefWidth="179.0" promptText="R_RLMAN_00001_001" style="-fx-background-radius: 5;" />
+                              <Label layoutX="9.0" layoutY="74.0" text="Product Name">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfPD_productID" layoutX="22.0" layoutY="92.0" prefHeight="26.0" prefWidth="179.0" promptText="Bacsilog" style="-fx-background-radius: 5;" />
+                              <Button fx:id="btnOD_search" layoutX="147.0" layoutY="134.0" mnemonicParsing="false" onAction="#loadData" text="Search" />
+                              <Button fx:id="btnPD_delete" layoutX="87.0" layoutY="133.0" mnemonicParsing="false" onAction="#PD_delete" text="Delete" />
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="244.0" prefHeight="510.0" prefWidth="807.0">
+                           <content>
+                              <GridPane fx:id="cardGrid" alignment="TOP_CENTER" prefHeight="91.0" prefWidth="805.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

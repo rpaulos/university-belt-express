@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Business.Class.BusinessEditStockController">
+   <children>
+      <ImageView fitHeight="740.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../User%20Interface/Business%20EditStock.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tbl_stockView" layoutX="23.0" layoutY="114.0" prefHeight="290.0" prefWidth="294.0">
+         <columns>
+            <TableColumn fx:id="col_stockproductId" prefWidth="77.59997749328613" text="Product ID" />
+            <TableColumn fx:id="col_stockproductName" prefWidth="107.20000457763672" text="Product Name" />
+            <TableColumn fx:id="col_productQuantity" prefWidth="111.20001220703125" text="Product Quantity" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_sreturntoProfile" layoutX="13.0" layoutY="12.0" mnemonicParsing="false" onAction="#toReturntoProfilePageStockHandler" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="tf_sproductID" layoutX="23.0" layoutY="422.0" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="tf_sproductName" layoutX="22.0" layoutY="484.0" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="tf_sproductQuantity" layoutX="23.0" layoutY="540.0" prefHeight="27.0" prefWidth="294.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_updateProductQuantity" layoutX="19.0" layoutY="682.0" mnemonicParsing="false" onAction="#handleUpdateStock" prefHeight="34.0" prefWidth="302.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>

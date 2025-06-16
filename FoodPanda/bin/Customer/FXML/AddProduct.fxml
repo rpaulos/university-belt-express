@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.Class.AddProductController">
+   <children>
+      <ImageView fitHeight="740.0" fitWidth="340.0" layoutX="70.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../User%20Interface/Add%20Product.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lbl_product_name" layoutX="12.0" layoutY="242.0" prefHeight="23.0" prefWidth="203.0" text="Zinger Steak" wrapText="true">
+         <font>
+            <Font name="Arial Black" size="19.0" />
+         </font>
+      </Label>
+      <Text fx:id="txt_desc" layoutX="12.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" wrappingWidth="188.4000122070313">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Button fx:id="btn_back" layoutX="12.0" layoutY="21.0" mnemonicParsing="false" onAction="#backToRestaurant" prefHeight="26.0" prefWidth="30.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_addToBasket" layoutX="208.0" layoutY="360.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_BuyNow" layoutX="109.0" layoutY="11.0" mnemonicParsing="false" onAction="#buyNow" prefHeight="10.0" prefWidth="10.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_add" layoutX="288.0" layoutY="322.0" mnemonicParsing="false" onAction="#addQuantity" prefHeight="26.0" prefWidth="26.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_subtract" layoutX="205.0" layoutY="322.0" mnemonicParsing="false" onAction="#deductQuantity" prefHeight="26.0" prefWidth="32.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="tf_quantity" alignment="TOP_CENTER" layoutX="241.0" layoutY="321.0" prefHeight="18.0" prefWidth="38.0" style="-fx-background-color: transparent;" text="1" />
+      <Button fx:id="btn_food" layoutX="24.0" layoutY="691.0" mnemonicParsing="false" onAction="#toHome" prefHeight="40.0" prefWidth="34.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_grocery" layoutX="109.0" layoutY="692.0" mnemonicParsing="false" onAction="#toComingSoon" prefHeight="40.0" prefWidth="34.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_account" layoutX="280.0" layoutY="692.0" mnemonicParsing="false" onAction="#toProfile" prefHeight="40.0" prefWidth="34.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_search" layoutX="197.0" layoutY="692.0" mnemonicParsing="false" onAction="#toComingSoon" prefHeight="40.0" prefWidth="34.0" style="-fx-background-color: transparent;" />
+      <Label fx:id="lbl_price" layoutX="271.0" layoutY="244.0" prefHeight="23.0" prefWidth="61.0" text="200.00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="244.0" prefHeight="23.0" prefWidth="17.0" text="₱">
+         <font>
+            <Font name="Arial Black" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="img_product_header" fitHeight="180.0" fitWidth="345.0" layoutX="-3.2" layoutY="59.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="-2.0">
+         <image>
+            <Image url="@../../User%20Interface/Restaurant%20Product%20Header/default_product_header.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_like" layoutX="253.0" layoutY="21.0" mnemonicParsing="false" onAction="#toComingSoon" prefHeight="26.0" prefWidth="30.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btn_cart" layoutX="298.0" layoutY="23.0" mnemonicParsing="false" onAction="#toCart" prefHeight="26.0" prefWidth="30.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>
