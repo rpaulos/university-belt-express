@@ -1,60 +1,63 @@
-# university-belt-express
-## Student-Friendly Food Delivery App  
+# university-belt-express  
+## U-Belt Centric Food Delivery App: A Solution for Affordable Dining
 
 ## Overview  
-- **U-Belt-ExPress** is a full-stack food delivery application developed specifically for students within the University Belt (U-Belt) area of Manila. Taking inspiration from established platforms like Foodpanda, it aims to provide a fast, reliable, and student-friendly way to order food from nearby local restaurants, eateries, and food stalls. The platform is designed with the student lifestyle in mind—prioritizing affordability, convenience, and ease of use.
-- The project is currently in the active development stage, with both frontend and backend systems being constructed in parallel. Efforts are focused on building the app's foundational structure, which includes user interface design, database schema development through an Entity Relationship Diagram (ERD), and essential functionalities such as restaurant listings, order placement, and a built-in e-wallet for cashless transactions.
-- To ensure real-time relevance and pricing accuracy, UBELT-ExPress incorporates web-scraped data from restaurant pages and menus. This allows the platform to dynamically reflect menu offerings and prices from partner establishments within the U-Belt area, improving the overall accuracy and usefulness of the app for its student users.
+**U-Belt-ExPress** is a full-stack food delivery application developed for students and residents in the University Belt (U-Belt) area of Manila. Taking inspiration from platforms like Foodpanda, the app offers a fast, reliable, and cost-effective way to order food from local restaurants, eateries, and food stalls. It prioritizes affordability, accessibility, and simplicity to meet the needs of students and the wider academic community.
 
-(This project is not intended to create and deliver actual orders.)
+Now fully developed, the project features core systems including a functional user interface, database integration, and essential backend logic to simulate food ordering processes.
+
+> ⚠️ *This project is intended for educational and demonstration purposes only. No actual food orders or deliveries will be made.*
 
 ## Purpose  
-The goal of UBELT-ExPress is to:  
-- Provide a **student-focused food delivery platform** with an easy-to-use interface. 
-- Create a working **database structure** to handle users, partner restaurants, and order data.  
-- Explore **backend systems** that simulate a real-time food ordering process.  
+The project aims to:
+- Provide an accessible and intuitive **food delivery platform** centered around the U-Belt community.
+- Develop a working **database and backend infrastructure** for simulating real-world ordering workflows.
+- Leverage web technologies to deliver **real-time and location-aware features** for improved user experience.
 
-## Features (Planned)  
-- **User Authentication** – Sign up, log in, and manage profiles.  
-- **Restaurant Listings** – Browse available restaurants and menus.  
-- **Order Management** – Place, track, and manage food orders.
-- **E-Wallet Integration** – Manage in-app payments and balance.
-- **Manage Restaurant** - Login as business owner. Manage stock quantity.
-- **Estimated Time of Delivery** - The Google Maps API offers Distance Matrix that allows for the ETA from point A to B including traffic time.
-- **Personalized Messages** - The OpenAI API will customize the short messages to notify deliveries and orders.
+## Features  
+- **User Authentication** – Sign up, log in, and manage personal profiles.  
+- **Restaurant Listings** – Browse nearby partner restaurants and view updated menus.  
+- **Order Management** – Simulate placing, tracking, and managing food orders.  
+- **Business Dashboard** – Restaurant owners can log in, manage menus, and update stock quantities.  
+- **Estimated Time of Delivery (ETA)** – Integrated Google Maps API provides travel time estimates based on distance and real-time traffic.  
 
 ## Technologies Used  
-- **Backend:** Java, Python
-- **Database:** MySQL, Microsoft SQL
-- **UI/UX:** Figma and Scene Buidler
-- **IDE:** VScode
-- **Tools:** Git, Github
-- **Other Languages:** Open to future additions as needed  
+- **Backend:** Java  
+- **Frontend UI:** JavaFX (Scene Builder)  
+- **Database:** MySQL  
+- **Tools:** Git, GitHub  
+- **Design:** Figma  
+- **IDE:** Visual Studio Code  
 
 ## Installation  
 1. Clone this repository:  
    ```sh  
    git clone https://github.com/rpaulos/ubeltExpress  
    ```  
-2. Set up the project environment.
-   - Setup Anaconda
-   - Install python, googlemaps, OpenAI, Selenium, and Undetected Chrome Driver
-4. Configure the MySQL database using the provided schema (See the sql_script).  
-5. Run the application in your Java development environment.  
+2. Set up the project environment:  
+   - Install Java (JDK 17 or later)  
+   - Download and configure the JavaFX SDK  
+   - Install MySQL and create the schema using the provided SQL script  
+3. Open the project in your IDE (e.g., VS Code)  
+4. Build and run the JavaFX application  
 
 ## Usage  
-1. Navigate through the UI to explore restaurant listings (once implemented).  
-2. Place an order from the menu (future feature).  
-3. Track your order status (future feature).  
+1. Launch the application  
+2. Log in as a user or business owner  
+3. Browse restaurants and menu items  
+4. Simulate placing and tracking food orders  
 
 ## Future Enhancements  
-- **Web Scraping** - Gather data from the websites of various local restaurants nearby.
-  
+- **Web Scraping Automation** – Expand scraping coverage and update frequency for additional restaurant data  
+- **User Ratings and Reviews** – Allow users to leave feedback on meals and restaurants  
+- **Admin Panel** – Add centralized controls for managing users and restaurants  
 
 ## Contributors  
-- **[Rae Paulos](https://github.com/rpaulos)** – Lead Frontend, Backend Developer, & Customer Side
-- **[Tristan Sevilla](https://github.com/Hyakkki)** - Frontend, Backend Developer & Business Side
-- **[Jared Pilapil](https://github.com/RedJared)** - Frontend, Backend Developer & Admin Side
+- **[Rae Paulos](https://github.com/rpaulos)** – Lead Frontend & Backend Developer | Customer & Admin Side  
+- **[Tristan Sevilla](https://github.com/Hyakkki)** – Frontend & Backend Developer | Business & Admin Side
+- **[Jared Pilapil](https://github.com/RedJared)** – Backend Developer
 
 ## License  
-This project is for **personal and educational purposes** and is not intended for commercial use.  
+This project is for **personal and educational purposes only** and is not intended for commercial use.
+
+> ⚠️ *Encountered a problem with Git history — the final submitted version of the project is located inside the `FoodPanda` folder in this repository.*
