@@ -183,7 +183,7 @@ public class ReceiptController {
         address = address + ", Manila, Philippines";
 
         try {
-            String API_KEY = "AIzaSyBuklDiWOw9gdQNHS1TrlZQ85x_ZVtu7A0";
+            String API_KEY = "MY_API_KEY";
             String origin = restaurantLocation;
             String destination = address;
 
