@@ -59,3 +59,5 @@ The project aims to:
 
 ## License  
 This project is for **personal and educational purposes only** and is not intended for commercial use.
+
+> ⚠️ *Encountered a problem with Git history — the final submitted version of the project is located inside the `FoodPanda` folder in this repository.*
